@@ -17,12 +17,12 @@ const Banner = () => {
         <Box 
         color={'white'} 
         position={'absolute'}
-        bottom={'8%'}
+        bottom={'5%'}
         left={'50%'}
         transform={'translate(-50%)'}
         textAlign={'center'}
         >
-            <Text as={'h1'} fontSize={['60px','80px','80px','100px']} w={'100vw'} fontWeight={"700"}>All Apple Originals.</Text>
+            <Text as={'h1'} fontSize={['60px','80px','80px','90px']} w={'100vw'} fontWeight={"700"}>All Apple Originals.</Text>
             <Text as={'h1'} fontSize={['10px','12px','15px','20px']} w={'100vw'} >Exclusively on Apple TV+. Watch here and on the Apple TV app across your devices.</Text>
             <Button color={'#141a10'} bg='#ffffff' mt={'20px'}>Start Free Trial</Button>
             <Text mt={'20px'} as={'p'}>7&nbsp;days free, then $4.99/month.</Text>
