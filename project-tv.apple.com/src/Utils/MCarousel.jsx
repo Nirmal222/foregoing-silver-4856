@@ -6,14 +6,14 @@ import "slick-carousel/slick/slick.css";
 import getData from "../API/MovieAPI";
 import { Box, Text } from "@chakra-ui/react";
 
-const Carousel = (props) => {
-  const {text,url}=props
+const MCarousel = (props) => {
+  const {text,tag,url}=props
   const settings = {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 5,
-    slidesToScroll: 5,
+    slidesToShow: 4,
+    slidesToScroll: 4,
     initialSlide: 0,
     responsive: [
       {
@@ -47,8 +47,9 @@ const Carousel = (props) => {
     getData(url).then((res) => setData(res.data.results));
   }, []);
   return (
-    <Box  className="scard" >
-      <Text fontWeight={'bold'} textAlign={['center','left']} ml={[0,5]} mb={'20px'} fontSize={'xl'} color={'white'}>{text}</Text>
+    <Box  className="mcard" >
+      <Text fontWeight={'bold'} textAlign={['center','left']} ml={[0,5]} mb={'7px'} fontSize={'2xl'} color={'white'}>{text}</Text>
+      <Text mb={'20px'} textAlign={['center','left']} ml={[0,5]} fontSize={'md'} color={'gray'}>{tag}</Text>
       <Slider {...settings}>
         {data &&
           data.map((item) => {
@@ -66,4 +67,4 @@ const Carousel = (props) => {
   );
 };
 
-export default Carousel;
+export default MCarousel;

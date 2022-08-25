@@ -13,6 +13,7 @@ const Banner = () => {
         h={'100vh'}
         minW={['320px','480px','740px']}
         position={'relative'}
+        borderBottom={'10px solid  #0d0d0d'}
       >
         <Box 
         color={'white'} 

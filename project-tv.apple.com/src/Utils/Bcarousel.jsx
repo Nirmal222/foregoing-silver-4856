@@ -6,21 +6,21 @@ import "slick-carousel/slick/slick.css";
 import getData from "../API/MovieAPI";
 import { Box, Text } from "@chakra-ui/react";
 
-const Carousel = (props) => {
-  const {text,url}=props
+const Bcarousel = (props) => {
+  const {text,tag,url}=props
   const settings = {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 5,
-    slidesToScroll: 5,
+    slidesToShow: 1,
+    slidesToScroll: 1,
     initialSlide: 0,
     responsive: [
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToShow: 1,
+          slidesToScroll: 1,
           infinite: true,
           dots: false
         }
@@ -28,9 +28,9 @@ const Carousel = (props) => {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 1
         }
       },
       {
@@ -46,14 +46,16 @@ const Carousel = (props) => {
   useEffect(() => {
     getData(url).then((res) => setData(res.data.results));
   }, []);
+  console.log(data);
   return (
-    <Box  className="scard" >
-      <Text fontWeight={'bold'} textAlign={['center','left']} ml={[0,5]} mb={'20px'} fontSize={'xl'} color={'white'}>{text}</Text>
+    <Box  className="bcard" >
+      {/* <Text mb={'20px'} ml={['15vw','2vw','5vw','2vw']} fontSize={'md'} color={'gray'}>{tag}</Text> */}
       <Slider {...settings}>
         {data &&
           data.map((item) => {
-            return (
-              <Box pb={'20px'} w={['200px','200px','100px']} key={item.id}>
+              return (
+                  <Box position={'relative'} pb={'20px'} w={['200px','200px','100px']} key={item.id}>
+                  <Text position={'absolute'} bottom={'10vh'} stroke={'2px solid black'} left={'5rem'} fontWeight={'bold'} fontSize={['2rem']} color={'white'}>{item.title}</Text>
                 <img src={`https://image.tmdb.org/t/p/original/${item.backdrop_path}`} alt="" />
               </Box>
             )
@@ -66,4 +68,4 @@ const Carousel = (props) => {
   );
 };
 
-export default Carousel;
+export default Bcarousel;
