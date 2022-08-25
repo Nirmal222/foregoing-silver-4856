@@ -28,7 +28,7 @@ const Footer = () => {
                 </Box>
             
                 <Box color={'blue'}>
-                    <a href="https://support.apple.com/guide/tvplus/welcome/web">See all suported devices > </a>
+                    <a href="https://support.apple.com/guide/tvplus/welcome/web">See all suported devices </a>
                 </Box>
 
                 <Box display={'flex'} w={['70vw','30vw']} margin={['auto','auto']}>
@@ -67,11 +67,11 @@ const Footer = () => {
                 </Box>
 
                 <Box color={'blue'}>
-                    <a href="https://support.apple.com/guide/tvplus/welcome/web">Set up your Device > </a>
+                    <a href="https://support.apple.com/guide/tvplus/welcome/web">Set up your Device  </a>
                 </Box>
 
                 <Box color={'blue'}>
-                    <a href="https://support.apple.com/guide/tvplus/welcome/web">Explore compatable Devices > </a>
+                    <a href="https://support.apple.com/guide/tvplus/welcome/web">Explore compatable Devices</a>
                 </Box>
 
                 <Box display={'flex'} w={['70vw','15vw']} margin={['auto','auto']}>
