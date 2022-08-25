@@ -6,6 +6,7 @@ import Banner from '../components/HomePageComponents/Banner'
 import Carousel from '../Utils/Carousel';
 import MCarousel from '../Utils/MCarousel';
 import Bcarousel from '../Utils/Bcarousel';
+import Footer from '../components/HomePageComponents/Footer';
 const HomePage = () => {
     return (
         <Box 
@@ -19,6 +20,10 @@ const HomePage = () => {
             <Carousel text={'Watch Entire Seasons'} url={`https://api.themoviedb.org/3/movie/popular?api_key=aab69345023f012e488f5334e693cb59&language=en-US&page=1`}/>
             <MCarousel text={'Coming Soon'} tag={"Add to your upnext watchlist today."} url={'https://api.themoviedb.org/3/movie/upcoming?api_key=aab69345023f012e488f5334e693cb59&language=en-US&page=1'}/>
             <Bcarousel url={'https://api.themoviedb.org/3/movie/top_rated?api_key=aab69345023f012e488f5334e693cb59&language=en-US&page=1'}/>
+
+
+
+            <Footer/>
         </Box>
     );
 }
