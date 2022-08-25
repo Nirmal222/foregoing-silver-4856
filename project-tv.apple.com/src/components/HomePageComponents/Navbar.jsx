@@ -3,11 +3,12 @@ import { SiAppletv } from "react-icons/si";
 import { BiUserPlus } from "react-icons/bi";
 import { FaGripLines } from "react-icons/fa";
 import { AddIcon, SearchIcon } from "@chakra-ui/icons";
-
+import { useNavigate } from 'react-router-dom'
 
 import React from "react";
 
 const Navbar = () => {
+  const navigate=useNavigate()
   return (
     <Box 
      display={'flex'}
@@ -47,6 +48,7 @@ const Navbar = () => {
                 alignItems={"center"}
                 spacing={0}
                 mr={1}
+                onClick={()=>{navigate('/search')}}
             >
                 <SearchIcon
                 color={"white"}
