@@ -9,6 +9,11 @@ import React from "react";
 
 const Navbar = () => {
   const navigate=useNavigate()
+  const handleInput=(e)=>{
+    
+  }
+  
+
   return (
     <Box 
      display={'flex'}
@@ -33,7 +38,7 @@ const Navbar = () => {
         left={['50%','default']}
         transform={['translate(-50%)','translate(50%)']}
         >
-            <SiAppletv/>
+            <SiAppletv cursor={'pointer'} onClick={()=>navigate('/')}/>
             <AddIcon w={[3,4,4]} h={[3,4,4]}/>
         </Box>
 
@@ -65,6 +70,7 @@ const Navbar = () => {
                 h={["6", "7", "8"]}
                 borderStyle={"none"}
                 focusBorderColor="transparent"
+                onChange={handleInput}
                 />
             </HStack>
 
