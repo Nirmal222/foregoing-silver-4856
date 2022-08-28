@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 import getData from "../API/MovieAPI";
 import { Box, Text } from "@chakra-ui/react";
-
+import {Link} from 'react-router-dom'
 const MCarousel = (props) => {
   const {text,tag,url}=props
   const settings = {
@@ -55,7 +55,7 @@ const MCarousel = (props) => {
           data.map((item) => {
             return (
               <Box pb={'20px'} w={['200px','200px','100px']} key={item.id}>
-                <img src={`https://image.tmdb.org/t/p/original/${item.backdrop_path}`} alt="" />
+                <Link to={`/SingleMovie/${item.id}`}><img src={`https://image.tmdb.org/t/p/original/${item.backdrop_path}`} alt="" /></Link>
               </Box>
             )
           })}

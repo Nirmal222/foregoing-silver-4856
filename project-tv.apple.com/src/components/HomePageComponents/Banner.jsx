@@ -1,7 +1,7 @@
 import { Box, Button, Text } from "@chakra-ui/react";
 import React from "react";
 import {TriangleDownIcon } from "@chakra-ui/icons";
-
+import { Link } from 'react-scroll'
 const Banner = () => {
   return (
     <div>
@@ -29,7 +29,7 @@ const Banner = () => {
             <Text mt={'20px'} as={'p'}>7&nbsp;days free, then $4.99/month.</Text>
             <Text><span >Or 3 months free when you buy an eligible Apple device.&nbsp;Some titles coming later to Apple&nbsp;TV+.</span></Text>
         </Box>
-      <TriangleDownIcon position={'absolute'} bottom={'2%'} left={'50%'} color={'white'}/>
+        <Link activeClass="active" to="content" spy={true} smooth={true} offset={50} duration={500} cursor={'pointer'}><TriangleDownIcon position={'absolute'} bottom={'2%'} left={'50%'} color={'white'}/></Link>
       </Box>
     </div>
   );

@@ -3,11 +3,18 @@ import { SiAppletv } from "react-icons/si";
 import { BiUserPlus } from "react-icons/bi";
 import { FaGripLines } from "react-icons/fa";
 import { AddIcon, SearchIcon } from "@chakra-ui/icons";
-
+import { useNavigate } from 'react-router-dom'
 
 import React from "react";
+import Login from "../Signup/Login";
 
 const Navbar = () => {
+  const navigate=useNavigate()
+  const handleInput=(e)=>{
+    
+  }
+  
+
   return (
     <Box 
      display={'flex'}
@@ -32,7 +39,7 @@ const Navbar = () => {
         left={['50%','default']}
         transform={['translate(-50%)','translate(50%)']}
         >
-            <SiAppletv/>
+            <SiAppletv cursor={'pointer'} onClick={()=>navigate('/')}/>
             <AddIcon w={[3,4,4]} h={[3,4,4]}/>
         </Box>
 
@@ -47,6 +54,7 @@ const Navbar = () => {
                 alignItems={"center"}
                 spacing={0}
                 mr={1}
+                onClick={()=>{navigate('/search')}}
             >
                 <SearchIcon
                 color={"white"}
@@ -63,10 +71,11 @@ const Navbar = () => {
                 h={["6", "7", "8"]}
                 borderStyle={"none"}
                 focusBorderColor="transparent"
+                onChange={handleInput}
                 />
             </HStack>
 
-            <Button
+            {/* <Button
             size='xs'
             color={['#0a85ff',"white"]}
             display={["flex", "flex", "flex"]}
@@ -76,9 +85,11 @@ const Navbar = () => {
             pr={[1]}
             _hover={"none"}
             _active={"none"}
+            // onClick={handleLogin}
             ><BiUserPlus fontSize={'20px'}/>
             Sign In
-            </Button>
+            </Button> */}
+            <Login/>
             
 
         </Box>

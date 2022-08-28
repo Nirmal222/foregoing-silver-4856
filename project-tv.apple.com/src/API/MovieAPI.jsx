@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const getData = (url)=>{
-  return axios(url);
+  return axios(url)
 }
 export default getData;
 
