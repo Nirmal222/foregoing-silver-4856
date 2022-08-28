@@ -6,6 +6,7 @@ import { AddIcon, SearchIcon } from "@chakra-ui/icons";
 import { useNavigate } from 'react-router-dom'
 
 import React from "react";
+import Login from "../Signup/Login";
 
 const Navbar = () => {
   const navigate=useNavigate()
@@ -74,7 +75,7 @@ const Navbar = () => {
                 />
             </HStack>
 
-            <Button
+            {/* <Button
             size='xs'
             color={['#0a85ff',"white"]}
             display={["flex", "flex", "flex"]}
@@ -84,9 +85,11 @@ const Navbar = () => {
             pr={[1]}
             _hover={"none"}
             _active={"none"}
+            // onClick={handleLogin}
             ><BiUserPlus fontSize={'20px'}/>
             Sign In
-            </Button>
+            </Button> */}
+            <Login/>
             
 
         </Box>

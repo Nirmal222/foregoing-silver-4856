@@ -3,7 +3,9 @@ import { background, Box, Image, Text } from '@chakra-ui/react'
 const Footer = () => {
     return (
         <Box bg={'black'} 
-        p={'20px'}>
+        p={'20px'}
+        className={'fot'}
+        >
             <Box textAlign={'center'} display={'grid'} justifyContent={'center'}>
                 
                 <Box 
@@ -14,46 +16,46 @@ const Footer = () => {
                  }
                  backgroundRepeat={'no-repeat'}
                  backgroundSize={'cover'}
-                 pb={'30px'}
+                 pb={'50px'}
                  ></Box>
 
-                <Box>
+                <Box pb={'20px'} pt={'10px'}>
                   <Text color='white' fontWeight={'700'} fontSize={['xl','4xl']}>Watch Apple TV+ here  or <br /> anywhere.</Text>
                 </Box> 
                 
-                <Box>
+                <Box pb={'20px'} pt={'10px'}>
                     <Text color={'white'} fontSize={['xs','md','xl']}>
                        Find Apple TV+ on the Apple TV app, available on Apple devices, smart <br /> TVs, and more.
                     </Text>
                 </Box>
             
-                <Box color={'blue'}>
+                <Box  pb={'20px'} pt={'10px'} color={'blue'}>
 
                     <a href="https://support.apple.com/guide/tvplus/welcome/web">See all suported devices</a>
                 </Box>
 
-                <Box display={'flex'} w={['70vw','30vw']} margin={['auto','auto']}>
+                <Box display={'flex'} w={['70vw','30vw']} pb={'20px'} pt={'10px'} margin={['auto','auto']}>
                     <Box  w={'fit-content'} textAlign={'center'} w={'100px'}>
                         <Image src='https://tv.apple.com/assets/icons/product_landing_apple_tv_wht-9610e73e2ef117d35da65eed60d2624a.png'/>
                         <Text color={'white'} >Apple TV</Text>
                     </Box>
                     
-                    <Box  w={'fit-content'} textAlign={'center'} w={'100px'}>
+                    <Box  w={'fit-content'} textAlign={'center'} pb={'20px'} pt={'10px'} w={'100px'}>
                         <Image src='https://tv.apple.com/assets/icons/product_landing_iPhone_wht-0adcded885905e1a22bfc7ae9bf45fa8.png'/>
                         <Text color={'white'} >Apple TV</Text>
                     </Box>
 
-                    <Box  w={'fit-content'} textAlign={'center'} w={'100px'}>
+                    <Box  pb={'20px'} pt={'10px'} w={'fit-content'} textAlign={'center'} w={'100px'}>
                         <Image src='https://tv.apple.com/assets/icons/product_landing_iPad_wht-ac93596ed7aeb5e1c15ba18bcb7bfd13.png'/>
                         <Text color={'white'} >Apple TV</Text>
                     </Box>
 
-                    <Box  w={'fit-content'} textAlign={'center'} w={'100px'}>
+                    <Box pb={'20px'} pt={'10px'}  w={'fit-content'} textAlign={'center'} w={'100px'}>
                         <Image src='https://tv.apple.com/assets/icons/product_landing_mac_wht-37e6f73080a15fe8a35b85e7ba8f5468.png'/>
                         <Text color={'white'} >Apple TV</Text>
                     </Box>
 
-                    <Box  w={'fit-content'} textAlign={'center'} w={'100px'}>
+                    <Box pb={'20px'} pt={'10px'} w={'fit-content'} textAlign={'center'} w={'100px'}>
                         <Image src='https://tv.apple.com/assets/icons/product_landing_airplay_wht-f348507fa5bdc6b005b126f0654aa663.png'/>
                         <Text color={'white'} >Apple TV</Text>
                     </Box>
